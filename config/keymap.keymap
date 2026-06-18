@@ -20,11 +20,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1        &kp N2    &kp N3    &kp N4    &kp N5                            &kp N6       &kp N7  &kp N8     &kp N9            &kp N0                &kp DEL
-&kp TAB    &kp Q         &kp W     &kp E     &kp R     &kp T                             &kp Y        &kp U   &kp I      &kp O             &kp P                 &kp BSPC
-&kp CAPS   &kp A         &kp S     &kp D     &kp F     &kp G   &kp MINUS    &kp EQUAL    &kp H        &kp J   &kp K      &kp L             &kp SEMI              &kp SQT
-&kp LSHFT  &kp Z         &kp X     &kp C     &kp V     &kp B   &mkp LCLK    &mkp RCLK    &kp N        &kp M   &kp COMMA  &kp DOT           &mt RIGHT_SHIFT FSLH  &kp GRAVE
-&kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp CAPS  &kp BSPC  &mo 1   &lt 2 SPACE  &lt 2 SPACE  &lt 3 ENTER  &none   &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH
+&kp ESC    &kp N1        &kp N2    &kp N3     &kp N4  &kp N5                                       &kp N6       &kp N7  &kp N8     &kp N9         &kp N0                &kp GRAVE
+&kp TAB    &kp Q         &kp W     &kp E      &kp R   &kp T                                        &kp Y        &kp U   &kp I      &kp O          &kp P                 &kp MINUS
+&kp CAPS   &kp A         &kp S     &kp D      &kp F   &kp G   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp H        &kp J   &kp K      &kp L          &kp SEMI              &kp SQT
+&kp LSHFT  &kp Z         &kp X     &kp C      &kp V   &kp B   &mkp LCLK         &mkp RCLK          &kp N        &kp M   &kp COMMA  &kp DOT        &mt RIGHT_SHIFT FSLH  &kp F10
+&kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp EQUAL  &mo 2   &mo 1   &kp SPACE         &kp BACKSPACE      &lt 3 ENTER  &none   &none      &kp RIGHT_ALT  &kp BACKSLASH         &kp F4
             >;
         };
 
@@ -41,7 +41,7 @@
         layer_2 {
             bindings = <
 &trans  &trans            &trans            &trans      &trans      &trans                      &trans         &trans         &trans            &trans             &trans         &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)     &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)     &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &kp EQUAL
 &trans  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5      &trans  &trans  &kp MINUS      &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp GRAVE
 &trans  &kp N6            &kp N7            &kp N8      &kp N9      &kp N0      &trans  &trans  &kp LS(MINUS)  &kp LS(EQUAL)  &kp LEFT_BRACE    &kp RIGHT_BRACKET  &none          &trans
 &trans  &trans            &trans            &trans      &trans      &trans      &trans  &trans  &kp TAB        &kp DEL        &trans            &trans             &trans         &trans
