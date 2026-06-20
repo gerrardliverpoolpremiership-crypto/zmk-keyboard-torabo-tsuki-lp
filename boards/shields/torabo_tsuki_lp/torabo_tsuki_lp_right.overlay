@@ -2,8 +2,23 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/* トラックボール周り */
 &pointing_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    /* まずは今まで通りのXY変換 */
+    input-processors =
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+
+    /* ここから追加: layer_6 のときだけスクロールに変換 */
+    scroller {
+        /* layer_6 が有効な間だけ有効にする */
+        layers = <6>;
+        input-processors =
+            <&zip_xy_to_scroll_mapper>,
+            /* スクロール量の調整。2つ目の数字を変えると感度が変わる */
+            <&zip_scroll_scaler 1 8>;
+        /* これを書いておくと、スクロール処理のあとも他のprocessorに渡せる */
+        process-next;
+    };
 };
 
 &size_s_transform {
