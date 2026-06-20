@@ -4,20 +4,15 @@
 
 /* トラックボール周り */
 &pointing_listener {
-    /* カーソル移動時のXY変換 + 速度調整 */
+    /* 方向反転だけ（元からあった設定） */
     input-processors =
-        /* 方向反転（必要なければINVERTフラグを減らす） */
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        /* カーソル速度の調整用スケーラ: 1 8 → 「8倍くらい」 */
-        /* 速くしたい: 1 10 / 1 12, 遅くしたい: 1 4 などに変更 */
-        <&zip_xy_scaler 1 8>;
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 
     /* layer_6 のときだけスクロールに変換 */
     scroller {
         layers = <6>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
-            /* スクロール量の調整: ここも好みに応じて変更可 */
             <&zip_scroll_scaler 1 8>;
         process-next;
     };
